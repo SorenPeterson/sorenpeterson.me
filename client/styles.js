@@ -1,17 +1,20 @@
 var currentStyleSheet = jss.createStyleSheet({});
 
-jss.style = function(style, options) {
-	currentStyleSheet.detach();
-	currentStyleSheet = jss.createStyleSheet(style, options);
-	currentStyleSheet.attach();
+jss.style = function(style) {
+	Tracker.autorun(function() {
+		currentStyleSheet.detach();
+		currentStyleSheet = jss.createStyleSheet(style(), {named:false});
+		currentStyleSheet.attach();
+	});
 };
 
 Template.Home.onRendered(function() {
-	currentStyleSheet = jss.style({
-		body: {
+	jss.style(function() {
+		return {
+		   	body: {
+				'background-image': Session.get('background')
+			}
 		}
-	}, {
-		named: false
 	});
 });
 

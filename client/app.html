@@ -1,20 +1,26 @@
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 </body>
 
 <template name="Layout">
 	{{> Header}}
-	{{> yield }}
+	<div>
+		{{> yield }}
+	</div>
 </template>
 
 <template name="Header">
-	<h1>Soren Peterson</h1>
-	<ul>
-		<li>
-			<a href="/portfolio">Portfolio</a>
-		</li>
-	</ul>
+	<header>
+		<h1>Soren Peterson</h1>
+		<ul>
+			<li>
+				<a href="/portfolio">Portfolio</a>
+			</li>
+		</ul>
+	</header>
 </template>
 
 <template name="Home">
