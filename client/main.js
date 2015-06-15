@@ -1,7 +1,7 @@
 Meteor.subscribe('projects');
 
 Meteor.startup(function() {
-	Session.set('background', 'url("/congruent_pentagon.png")');
+	Session.set('background', 'url("/squared_metal.png")');
 });
 
 Template.Portfolio.helpers({
