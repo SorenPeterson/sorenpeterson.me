@@ -3,11 +3,32 @@
 <body>
 </body>
 
-<template name="Home">
+<template name="Layout">
+	{{> Header}}
+	{{> yield }}
+</template>
+
+<template name="Header">
 	<h1>Soren Peterson</h1>
 	<ul>
 		<li>
 			<a href="/portfolio">Portfolio</a>
 		</li>
 	</ul>
+</template>
+
+<template name="Home">
+</template>
+
+<template name="Portfolio">
+	<h1>Projects</h1>
+	{{#each projects}}
+		<h3>{{name}}</h3>
+		<p>{{description}}</p>
+		<div>
+			<a href="{{link}}">
+				<img src="{{picture}}"/>
+			</a>
+		</div>
+	{{/each}}
 </template>
