@@ -8,11 +8,29 @@ jss.style = function(style) {
 	});
 };
 
-Template.Home.onRendered(function() {
+var footerSize = ReactiveVar(0);
+
+var getFooterSize = function() {
+	if(innerWidth <= 768 ) {
+		return $('#social-links');
+	} else {
+		return 0;
+	}
+};
+
+$(document).resize(function() {
+	footerSize.set(getFooterSize());
+});
+
+Template.Layout.onRendered(function() {
+	footerSize.set(getFooterSize());
 	jss.style(function() {
 		return {
-		   	body: {
+			body: {
 				'background-image': Session.get('background')
+			},
+			'.content': {
+				'margin-bottom': footerSize.get()
 			}
 		}
 	});

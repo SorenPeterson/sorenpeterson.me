@@ -8,3 +8,5 @@ meteor-platform
 iron:router
 soren468:jssmeteor
 sorenpeterson:topscope
+waitingkuo:normalize
+reactive-var

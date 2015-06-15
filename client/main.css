@@ -1,0 +1,53 @@
+.padded {
+	padding: 5px;
+}
+.clr-both {
+	clear: both;
+}
+
+body {
+	font-family: 'Raleway';
+}
+
+header {
+	box-shadow: 0 0 5px black;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 100vw;
+}
+
+header h1 {
+	margin: 0;
+}
+
+header a {
+	color: black;
+}
+
+@media (min-width: 768px) {
+	#social-links {
+		float: right;
+	}
+}
+
+@media (max-width: 768px) {
+	#social-links {
+		position: fixed;
+		width: 100vw;
+		float: none;
+		text-align: center;
+		padding: 5px;
+		bottom: 0;
+		left: 0;
+		box-shadow: 0 0 5px black;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+#social-links a {
+	margin: 0;
+	padding: 0;
+}
+
+.social-icon {
+	width: 50px;
+}

@@ -1,0 +1,54 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+</body>
+
+<template name="Layout">
+	{{> Header}}
+	<div>
+		{{> yield }}
+	</div>
+</template>
+
+<template name="Header">
+	<header>
+		<div class="padded">
+			<div id="social-links">
+				<a href="https://github.com/soren468"><img class="social-icon" src="/img/icons/github.png"/></a>
+				<a href="https://facebook.com/soren.peterson.39"><img class="social-icon" src="/img/icons/facebook.png"/></a>
+				<a href="https://plus.google.com/+SorenPeterson"><img class="social-icon" src="/img/icons/googleplus.png"/></a>
+				<a href="https://www.linkedin.com/pub/soren-peterson/99/762/329"><img class="social-icon" src="/img/icons/linkedin.png"/></a>
+				<a href="https://twitter.com/soren468"><img class="social-icon" src="/img/icons/twitter.png"/></a>
+			</div>
+			<h1>Soren Peterson</h1>
+			<a href="/portfolio">Portfolio</a>
+			<div class="clr-both"></div>
+		</div>
+	</header>
+</template>
+
+<template name="Home">
+	<div class="content">
+	</div>
+</template>
+
+<template name="Portfolio">
+	<h1>Projects</h1>
+	{{#each projects}}
+		<h3>{{name}}</h3>
+		<p>{{description}}</p>
+		{{#with github}}
+			<a href="{{this}}">
+				Github
+			</a>
+		{{/with}}
+		<div>
+			<a href="{{link}}">
+				<img src="{{picture}}"/>
+			</a>
+		</div>
+	{{/each}}
+</template>
