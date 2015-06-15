@@ -25,6 +25,11 @@
 	{{#each projects}}
 		<h3>{{name}}</h3>
 		<p>{{description}}</p>
+		{{#with github}}
+			<a href="{{this}}">
+				Github
+			</a>
+		{{/with}}
 		<div>
 			<a href="{{link}}">
 				<img src="{{picture}}"/>
