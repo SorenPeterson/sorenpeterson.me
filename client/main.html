@@ -7,6 +7,7 @@
 </body>
 
 <template name="Layout">
+	<marquee>Soren Peterson</marquee>
 	{{> Header}}
 	<div class="padded">
 		{{> yield }}
@@ -25,6 +26,8 @@
 			</div>
 			<h1>Soren Peterson</h1>
 			<a href="/portfolio">Portfolio</a>
+			<a href="/vidoes">Videos</a>
+			<a href="/opensource">Open Source</a>
 			<div class="clr-both"></div>
 		</div>
 	</header>
@@ -41,14 +44,13 @@
 		<h3>{{name}}</h3>
 		<p>{{description}}</p>
 		{{#with github}}
-			<a href="{{this}}">
-				Github
-			</a>
+			<a href="{{this}}">Github</a>
+		{{/with}}
+		{{#with link}}
+			<a href="{{this}}">Link</a>
 		{{/with}}
 		<div>
-			<a href="{{link}}">
-				<img src="{{picture}}"/>
-			</a>
+			<img src="{{picture}}"/>
 		</div>
 	{{/each}}
 </template>
