@@ -5,3 +5,8 @@ Meteor.publish('projects', function() {
 Meteor.publish('videos', function() {
 	return Videos.find();
 });
+
+Meteor.publish('admins', function() {
+	return Admins.find();
+});
+

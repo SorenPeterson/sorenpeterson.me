@@ -1,9 +1,16 @@
 Meteor.subscribe('projects');
 Meteor.subscribe('videos');
+Meteor.subscribe('admins');
 
 Meteor.startup(function() {
 	Session.set('background', 'url("/squared_metal.png")');
 });
+
+var Helpers = {
+	isAdmin: function() {
+		return !!Admins.findOne({userId: Meteor.userId()});
+	}
+}
 
 Template.Portfolio.helpers({
 	projects: function() {
@@ -27,8 +34,11 @@ Template.Layout.helpers({
 	}
 });
 
+Template.Videos.helpers(Helpers);
+
 Template.VideoCategory.helpers({
 	videos: function(category) {
 		return Videos.find({category: category});
 	}
 });
+
