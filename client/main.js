@@ -1,4 +1,5 @@
 Meteor.subscribe('projects');
+Meteor.subscribe('videos');
 
 Meteor.startup(function() {
 	Session.set('background', 'url("/squared_metal.png")');
@@ -26,3 +27,8 @@ Template.Layout.helpers({
 	}
 });
 
+Template.VideoCategory.helpers({
+	videos: function(category) {
+		return Videos.find({category: category});
+	}
+});

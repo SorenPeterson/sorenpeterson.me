@@ -66,6 +66,15 @@
 	<h1>Videos</h1>
 </template>
 
+<template name="VideoCategory">
+	<h1>{{category}}</h1>
+	{{#each videos category}}
+		<a href="{{link}}">Link</a>
+	{{else}}
+	<p>Sorry, there are no videos in this category</p>
+	{{/each}}
+</template>
+
 <template name="OpenSource">
 	<h1>Open Source</h1>
 </template>

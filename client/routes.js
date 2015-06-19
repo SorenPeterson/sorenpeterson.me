@@ -15,6 +15,16 @@ Router.route('/videos', function() {
 	this.render('Videos');
 });
 
+Router.route('/videos/:category', function() {
+	this.render('VideoCategory', {
+		data: function() {
+			return {
+				category: this.params.category
+			};
+		}
+	});
+});
+
 Router.route('/opensource', function() {
 	this.render('OpenSource');
 });

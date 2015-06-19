@@ -19,8 +19,8 @@ header h1 {
 	margin: 0;
 }
 
-header a {
-	color: black;
+a {
+	color: DodgerBlue;
 }
 
 @media (min-width: 768px) {
