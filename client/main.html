@@ -69,7 +69,7 @@
 <template name="VideoCategory">
 	<h1>{{category}}</h1>
 	{{#each videos category}}
-		<a href="{{link}}">Link</a>
+		<a href="{{link}}">{{title}}</a>
 	{{else}}
 	<p>Sorry, there are no videos in this category</p>
 	{{/each}}
