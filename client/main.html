@@ -6,7 +6,14 @@
 <body>
 </body>
 
+<template name="Login">
+	{{> loginButtons}}
+</template>
+
 <template name="Layout">
+	{{#if showLogin}}
+		{{> Login}}
+	{{/if}}
 	<marquee>Soren Peterson</marquee>
 	{{> Header}}
 	<div class="padded">
