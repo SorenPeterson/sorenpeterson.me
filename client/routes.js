@@ -29,3 +29,6 @@ Router.route('/opensource', function() {
 	this.render('OpenSource');
 });
 
+Router.route('/blog', function() {
+	this.render('Blog');
+});
