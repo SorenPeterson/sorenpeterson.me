@@ -11,12 +11,14 @@
 </template>
 
 <template name="Layout">
-	<marquee>Soren Peterson</marquee>
+	{{> Header}}
+	<marquee>
+		<img src="http://38.media.tumblr.com/tumblr_lwkkttrnB21qa2d04o1_500.gif"/>
+	</marquee>
 	{{#if showLogin}}
 		{{> Login}}
 	{{/if}}
-	{{> Header}}
-	<div class="padded">
+	<div class="content padded">
 		{{> yield }}
 	</div>
 </template>
