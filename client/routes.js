@@ -4,6 +4,7 @@ Router.onBeforeAction(function() {
 })
 
 Router.route('/', function() {
+	this.layout(null);
 	this.render('Home');
 });
 

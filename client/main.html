@@ -12,14 +12,21 @@
 
 <template name="Layout">
 	{{> Header}}
-	<marquee id="marquee" direction="right" scrollamount="10">
+	<!-- <marquee id="marquee" direction="right" scrollamount="10">
 		<img src="http://orig07.deviantart.net/6839/f/2014/075/7/a/running_pikachu_animation_by_miyakolupa-d7afleh.gif"/>
-	</marquee>
+	</marquee> -->
 	{{#if showLogin}}
 		{{> Login}}
 	{{/if}}
 	<div class="content padded">
 		{{> yield }}
+	</div>
+</template>
+<template name="Home">
+	<div class="home">
+		<center>
+			{{> Header}}
+		</center>
 	</div>
 </template>
 
@@ -38,11 +45,6 @@
 			<div class="clr-both"></div>
 		</div>
 	</header>
-</template>
-
-<template name="Home">
-	<div class="content">
-	</div>
 </template>
 
 <template name="Portfolio">

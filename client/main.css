@@ -72,3 +72,12 @@ a {
 marquee img {
 	width: 60px;
 }
+
+.home #social-links {
+	float: none;
+}
+
+.home header {
+	margin-top: 40vh;
+}
+
