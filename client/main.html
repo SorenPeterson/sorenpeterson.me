@@ -22,6 +22,7 @@
 		{{> yield }}
 	</div>
 </template>
+
 <template name="Home">
 	<div class="home">
 		<center>
@@ -96,8 +97,8 @@
 </template>
 
 <template name="Blog">
-	<h1>Blog</h1>
 	{{#each posts}}
+	{{#markdown}}{{content}}{{/markdown}}
 	{{/each}}
 </template>
 

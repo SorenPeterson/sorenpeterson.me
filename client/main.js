@@ -48,12 +48,8 @@ Template.VideoCategory.helpers({
 
 Template.Blog.helpers({
 	posts: function() {
-		return Posts.find().sort({_id: 1}).limit(5);
+		return Posts.find({}, {sort: {_id: 1}, limit: 5});
 	}
-});
-
-Template.Layout.onRendered(function() {
-	var marquee = document.getElementById('marquee');
 });
 
 
