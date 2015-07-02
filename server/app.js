@@ -6,7 +6,7 @@ Meteor.publish('videos', function() {
 	return Videos.find();
 });
 
-Meteor.publish('admins', function() {
-	return Admins.find();
+Meteor.publish('posts', function() {
+	return Posts.find();
 });
 

@@ -1,6 +1,6 @@
 Meteor.subscribe('projects');
 Meteor.subscribe('videos');
-Meteor.subscribe('admins');
+Meteor.subscribe('posts');
 
 Meteor.startup(function() {
 	Session.set('background', 'url("/squared_metal.png")');
@@ -8,7 +8,11 @@ Meteor.startup(function() {
 
 var Helpers = {
 	isAdmin: function() {
-		return !!Admins.findOne({userId: Meteor.userId()});
+		var result = ReactiveVar();
+		Meteor.call('isAdmin', function(err, res) {
+			result.set(res);
+		})
+		return result.get();
 	}
 }
 
@@ -41,4 +45,32 @@ Template.VideoCategory.helpers({
 		return Videos.find({category: category});
 	}
 });
+
+Template.Blog.helpers({
+	posts: function() {
+		return Posts.find().sort({_id: 1}).limit(5);
+	}
+});
+
+Template.Layout.onRendered(function() {
+	var marquee = document.getElementById('marquee');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

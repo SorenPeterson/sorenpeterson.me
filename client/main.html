@@ -12,8 +12,8 @@
 
 <template name="Layout">
 	{{> Header}}
-	<marquee>
-		<img src="http://38.media.tumblr.com/tumblr_lwkkttrnB21qa2d04o1_500.gif"/>
+	<marquee id="marquee" direction="right" scrollamount="10">
+		<img src="http://orig07.deviantart.net/6839/f/2014/075/7/a/running_pikachu_animation_by_miyakolupa-d7afleh.gif"/>
 	</marquee>
 	{{#if showLogin}}
 		{{> Login}}
@@ -95,5 +95,7 @@
 
 <template name="Blog">
 	<h1>Blog</h1>
+	{{#each posts}}
+	{{/each}}
 </template>
 
