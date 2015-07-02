@@ -97,8 +97,16 @@
 </template>
 
 <template name="Blog">
+	<form class="add">
+		<textarea></textarea>
+		<input type="submit"/>
+	</form>
 	{{#each posts}}
-	{{#markdown}}{{content}}{{/markdown}}
+		{{#markdown}}{{content}}{{/markdown}}
+		<form class="update">
+			<textarea>{{content}}</textarea>
+			<input type="submit"/>
+		</form>
 	{{/each}}
 </template>
 
