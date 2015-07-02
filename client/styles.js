@@ -1,3 +1,4 @@
+/*
 var currentStyleSheet = jss.createStyleSheet({});
 
 jss.style = function(style) {
@@ -35,4 +36,4 @@ Template.Layout.onRendered(function() {
 		}
 	});
 });
-
+*/
