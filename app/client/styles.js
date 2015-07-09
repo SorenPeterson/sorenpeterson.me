@@ -25,11 +25,9 @@ $(document).resize(function() {
 
 Template.Layout.onRendered(function() {
 	footerSize.set(getFooterSize());
+	console.log(footerSize.get());
 	jss.style(function() {
 		return {
-			body: {
-				'background-image': Session.get('background')
-			},
 			'.content': {
 				'margin-bottom': footerSize.get()
 			}

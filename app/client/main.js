@@ -2,10 +2,6 @@ Meteor.subscribe('projects');
 Meteor.subscribe('videos');
 Meteor.subscribe('posts');
 
-Meteor.startup(function() {
-	Session.set('background', 'url("/squared_metal.png")');
-});
-
 var Helpers = {
 	isAdmin: function() {
 		return Session.get('isAdmin');
@@ -55,21 +51,4 @@ Template.Blog.events({
 		Posts.update(this._id, {$set: {content: $(e.target).find('textarea').val()}});
 	}
 });	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
