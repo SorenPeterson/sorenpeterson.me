@@ -1,3 +1,9 @@
+Meteor.methods({
+	isAdmin: function() {
+		return Meteor.userId() && Meteor.user().isAdmin;
+	}
+});
+
 Meteor.publish('projects', function() {
 	return Projects.find();
 });

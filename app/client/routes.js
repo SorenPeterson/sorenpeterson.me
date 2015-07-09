@@ -1,5 +1,8 @@
 Router.onBeforeAction(function() {
 	this.layout('Layout');
+	Meteor.call('isAdmin', function(err, res) {
+		Session.set('isAdmin', res);
+	});
 	this.next();
 })
 

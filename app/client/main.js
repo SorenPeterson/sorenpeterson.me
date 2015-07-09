@@ -8,11 +8,7 @@ Meteor.startup(function() {
 
 var Helpers = {
 	isAdmin: function() {
-		var result = ReactiveVar();
-		Meteor.call('isAdmin', function(err, res) {
-			result.set(res);
-		})
-		return result.get();
+		return Session.get('isAdmin');
 	}
 }
 
@@ -51,6 +47,7 @@ Template.Blog.helpers({
 		return Posts.find({}, {sort: {_id: 1}, limit: 5});
 	}
 });
+Template.Blog.helpers(Helpers);
 
 Template.Blog.events({
 	'submit form.update': function(e, tmpl) {
