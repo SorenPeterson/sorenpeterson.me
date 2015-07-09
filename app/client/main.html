@@ -104,7 +104,17 @@
 		</form>
 	{{/if}}
 	{{#each posts}}
-		{{#markdown}}{{content}}{{/markdown}}
+		{{#if isAdmin}}
+			<div contentEditable="true">
+				<pre>
+					{{content}}
+				</pre>
+			</div>
+		{{else}}
+			<div>
+				{{#markdown}}{{content}}{{/markdown}}
+			</div>
+		{{/if}}
 		{{#if isAdmin}}
 			<form class="update">
 				<textarea>{{content}}</textarea>
