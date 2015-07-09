@@ -4,7 +4,7 @@ Meteor.subscribe('posts');
 
 var Helpers = {
 	isAdmin: function() {
-		return Session.get('isAdmin');
+		return (Session.get('isAdmin') && Meteor.userId());
 	}
 }
 

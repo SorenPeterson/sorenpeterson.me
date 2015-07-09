@@ -1,6 +1,6 @@
 Meteor.methods({
 	isAdmin: function() {
-		return Meteor.userId() && Meteor.user().isAdmin;
+		return Meteor.user().admin;
 	}
 });
 
