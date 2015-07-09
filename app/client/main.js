@@ -46,9 +46,5 @@ Template.Blog.helpers({
 Template.Blog.helpers(Helpers);
 
 Template.Blog.events({
-	'submit form.update': function(e, tmpl) {
-		e.preventDefault();
-		Posts.update(this._id, {$set: {content: $(e.target).find('textarea').val()}});
-	}
 });	
 
