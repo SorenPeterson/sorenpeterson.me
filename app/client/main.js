@@ -14,8 +14,8 @@ Template.Portfolio.helpers({
 	}
 });
 
-Template.Layout.events({
-	'click marquee': function() {
+Template.Header.events({
+	'click h1': function() {
 		var state;
 		Tracker.nonreactive(function() {
 			state = Session.get('showLogin');
