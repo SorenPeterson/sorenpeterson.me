@@ -99,7 +99,7 @@
 <template name="Blog">
 	{{#each posts}}
 		{{#if isAdmin}}
-			<button class="save">Save</button>
+			<button class="save" data-id="{{_id}}">Save</button>
 			<input type="text"/>
 			<div contentEditable="true">
 				<pre>

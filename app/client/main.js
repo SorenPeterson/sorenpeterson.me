@@ -46,5 +46,18 @@ Template.Blog.helpers({
 Template.Blog.helpers(Helpers);
 
 Template.Blog.events({
+	'click button.save': function(e, tmpl) {
+		console.log('hi');
+		var _id = e.target.dataset.id;
+		var content = $(e.target.parentNode).find('pre').text();
+		console.log(_id);
+		Posts.update({
+			_id: ObjectID(_id)
+		}, {
+			$set: {
+				content: content
+			}
+		});
+	}
 });	
 
