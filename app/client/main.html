@@ -40,9 +40,9 @@
 			</div>
 			<h1>Soren Peterson</h1>
 			<a href="/portfolio">Portfolio</a>
-			<a href="/videos">Videos</a>
+			<!-- <a href="/videos">Videos</a> -->
 			<a href="/opensource">Open Source</a>
-			<a href="/blog">Blog</a>
+			<a href="https://medium.com/@sorenpeterson">Blog</a>
 			<div class="clr-both"></div>
 		</div>
 	</header>
@@ -99,13 +99,8 @@
 <template name="Blog">
 	{{#each posts}}
 		{{#if isAdmin}}
-			<button class="save" data-id="{{_id}}">Save</button>
-			<input type="text"/>
-			<div contentEditable="true">
-				<pre>
-					{{content}}
-				</pre>
-			</div>
+			<button class="save" data-id="{{_id._str}}">Save</button>
+			<pre><div class="post-content" contentEditable="true">{{content}}</div></pre>
 		{{else}}
 			<div>
 				{{#markdown}}{{content}}{{/markdown}}

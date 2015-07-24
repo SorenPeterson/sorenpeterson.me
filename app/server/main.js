@@ -16,3 +16,9 @@ Meteor.publish('posts', function() {
 	return Posts.find();
 });
 
+Posts.allow({
+	update: function(userId, doc, fieldNames, modifier) {
+		return Meteor.user().admin;
+	}
+});
+
