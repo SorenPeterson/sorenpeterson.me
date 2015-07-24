@@ -65,47 +65,7 @@
 	{{/each}}
 </template>
 
-<template name="Videos">
-	<h1>Videos</h1>
-	<a href="/videos/JavaScript">JavaScript</a>
-	{{#if isAdmin}}
-		<form>
-			<input type="text" placeholder="Name"/>
-			<input type="text" placeholder="Description"/>
-			<input type="file"/>
-		</form>
-	{{/if}}
-</template>
-
-<template name="VideoCategory">
-	<h1>{{category}}</h1>
-	{{#each videos category}}
-		{{>VideoOverlay link=link type=type}}
-	{{else}}
-	<p>Sorry, there are no videos in this category</p>
-	{{/each}}
-</template>
-
-<template name="VideoOverlay">
-	<video width="400px" src="{{link}}" type="video/{{type}}" controls>
-		<p>Your browser doesn't support video</p>
-	</video>
-</template>
-
 <template name="OpenSource">
 	<h1>Open Source</h1>
-</template>
-
-<template name="Blog">
-	{{#each posts}}
-		{{#if isAdmin}}
-			<button class="save" data-id="{{_id._str}}">Save</button>
-			<pre><div class="post-content" contentEditable="true">{{content}}</div></pre>
-		{{else}}
-			<div>
-				{{#markdown}}{{content}}{{/markdown}}
-			</div>
-		{{/if}}
-	{{/each}}
 </template>
 

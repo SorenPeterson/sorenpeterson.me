@@ -30,14 +30,6 @@ Template.Layout.helpers({
 	}
 });
 
-Template.Videos.helpers(Helpers);
-
-Template.VideoCategory.helpers({
-	videos: function(category) {
-		return Videos.find({category: category});
-	}
-});
-
 Template.Blog.helpers({
 	posts: function() {
 		return Posts.find({}, {sort: {_id: 1}, limit: 5});
