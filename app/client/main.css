@@ -299,6 +299,11 @@ body {
 	height: 350px;
 	overflow: hidden;
 	position: relative;
+	display: none;
+}
+
+.screenshot-container.open {
+	display: block;
 }
 
 .screenshot-container img {
@@ -315,18 +320,18 @@ body {
 	padding: 10px 0;
 }
 
-.screenshot-list-container .directional-button {
+.portfolio-item-expanded .directional-button {
 	position: absolute;
 	width: 30px;
 	top: 50%;
 	z-index: 4;
 }
 
-.screenshot-list-container .right {
+.portfolio-item-expanded .right {
 	right: 15px;
 }
 
-.screenshot-list-container .left {
+.portfolio-item-expanded .left {
 	left: 15px;
 }
 
