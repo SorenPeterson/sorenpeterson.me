@@ -7,14 +7,3 @@ Template.PortfolioItem.events({
 	}
 });
 
-Template.Portfolio.onRendered(function() {
-	$('.screenshot-list-container').height(
-		$('.portfolio-item-expanded').height() - 100
-	);
-	$(window).resize(function() {
-		$('.screenshot-list-container').height(
-			$('.portfolio-item-expanded').height() - 100
-		);
-	});
-});
-

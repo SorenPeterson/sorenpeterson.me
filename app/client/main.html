@@ -54,30 +54,42 @@
 
 <template name="Portfolio">
 	<div class="portfolio-container">
-		{{> PortfolioItem}}
-		{{> Doge}}
+		<p>These are a few of the projects that I have worked on. You can click on any of them for more information.</p>
+		{{#PortfolioItem}}
+			<div class="portfolio-item-container" style="background-image: url(/3030.jpg);">
+				<div class="title">
+					<h1>Nature Heals 30 x 30</h1>
+				</div>
+				<div class="description">
+					<p>This application was designed to enhance the users experience in nature. I worked closely with organizers at the University of Minnesota to create a useful tool that would not distract from nature.</p>
+				</div>
+			</div>
+			<div class="portfolio-item-expanded">
+				<img src="/close.png" class="close"/>
+				<div class="download-badge-container">
+					<a href="https://itunes.apple.com/us/app/nature-heals-30-x-30/id1013557887?mt=8" target="_blank">
+						<img class="download-badge" src="/badge-download-on-the-app-store.svg"/>
+					</a>
+					<a href="https://play.google.com/store/apps/details?id=com.idt5nn5sjxmpbl14t6mty" target="_blank">
+						<img class="download-badge" src="/Get_it_on_Google_play.svg"/>
+					</a>
+				</div>
+				<h1>Nature Heals 30 x 30</h1>
+				<div class="screenshot-list-container">
+					<img class="directional-button left" src="/left.png"/>
+					<img class="directional-button right" src="/right.png"/>
+					<div class="screenshot-container">
+						<img src="/3030-screenshot-1.png"/>
+						<div class="description">This is main page for the application.</div>
+					</div>
+				</div>
+			</div>
+		{{/PortfolioItem}}
 	</div>
 </template>
 
 <template name="PortfolioItem">
-	<div class="portfolio-item-container" style="background-image: url(/3030.jpg);">
-		<div class="title">
-			<h1>Nature Heals 30 x 30</h1>
-		</div>
-		<div class="description">
-			<p>This application was designed to enhance the users experience in nature. I worked closely with organizers at the University of Minnesota to create a useful tool that would not distract from nature.</p>
-		</div>
-	</div>
-	<div class="portfolio-item-expanded">
-		<img src="/close.png" class="close"/>
-		<a href="https://itunes.apple.com/us/app/nature-heals-30-x-30/id1013557887?mt=8" target="_blank">
-			<img class="download-badge" src="/badge-download-on-the-app-store.svg"/>
-		</a>
-		<a href="https://play.google.com/store/apps/details?id=com.idt5nn5sjxmpbl14t6mty" target="_blank">
-			<img class="download-badge" src="/Get_it_on_Google_play.svg"/>
-		</a>
-		<h1>Nature Heals 30 x 30</h1>
-	</div>
+	{{> UI.contentBlock}}
 </template>
 
 <template name="Doge">
