@@ -209,6 +209,7 @@ body {
 }
 
 .download-badge {
+	position: relative;
 	height: 40px;
 	float: right;
 	clear: right;
