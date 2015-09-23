@@ -134,11 +134,12 @@ body {
 
 .intro-container.intro-container-header {
 	background-color: rgba(255, 255, 255, 0.25);
-	padding: 40px 0 20px;
+	padding: 20px 10px;
 }
 
 .intro-container.intro-container-section {
-	padding: 40px 0;
+	padding: 20px 10px;
+	text-align: justify;
 }
 
 .intro-container.intro-container-footer {
@@ -155,6 +156,8 @@ body {
 
 .portfolio-container {
 	text-align: center;
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 20px 10px;
 }
 
 .portfolio-item-container {
