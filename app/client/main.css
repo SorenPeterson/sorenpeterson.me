@@ -485,7 +485,7 @@ body {
 }
 
 @media (max-width: 768px) {
-	.hobbies-content-item img {
+	.hobbies-content-item img, .hobbies-content-item video {
 		height: auto;
 		width: 80%;
 	}
