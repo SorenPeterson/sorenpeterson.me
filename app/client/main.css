@@ -479,8 +479,8 @@ body {
 	display: block;
 }
 
-.hobbies-content-item img {
-	height: 250px;
+.hobbies-content-item img, .hobbies-content-item video {
+	height: 240px;
 	box-shadow: 0 3px 5px gray;
 }
 
