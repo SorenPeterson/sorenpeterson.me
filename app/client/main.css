@@ -464,10 +464,32 @@ body {
 	right: 10px;
 }
 
-.hobbies-content-item img.wide {
-	width: 80%;
+.hobbies-content-item {
+	display: none;
+}
+
+.hobbies-content-item.open {
+	display: block;
+}
+
+.hobbies-content-item img {
+	height: 250px;
+	box-shadow: 0 3px 5px gray;
+}
+
+@media (max-width: 768px) {
+	.hobbies-content-item img {
+		height: auto;
+		width: 80%;
+	}
+
+	.hobbies-card {
+		min-width: auto;
+		width: 100%;
+	}
 }
 
 .hobbies-content-item p {
+	height: 50px;
 }
 

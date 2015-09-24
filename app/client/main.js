@@ -36,3 +36,24 @@ Template.PortfolioItem.onRendered(function() {
 	});
 });
 
+Template.HobbiesItem.events({
+	'click .right': function(evt, tmpl) {
+		var $open_container = $(tmpl.find('.hobbies-content-item.open'));
+		$open_container.removeClass('open');
+		var $next = $open_container.next();
+		if(!$next[0]) {
+			$next = $open_container;
+		}
+		$next.addClass('open');
+	},
+	'click .left': function(evt, tmpl) {
+		var $open_container = $(tmpl.find('.hobbies-content-item.open'));
+		$open_container.removeClass('open');
+		var $prev = $open_container.prev();
+		if(!$prev[0]) {
+			$prev = $open_container;
+		}
+		$prev.addClass('open');
+	}
+});
+
