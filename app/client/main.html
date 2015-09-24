@@ -12,6 +12,9 @@
 	{{> Home }}
 	{{> Portfolio}}
 	{{> Resume}}
+	{{> Warning}}
+	{{> Hobbies}}
+	{{> Footer}}
 </body>
 
 <template name="Home">
@@ -147,6 +150,45 @@
 				<img src="/resume.png"/>
 			</div>
 		</a>
+	</div>
+</template>
+
+<template name="Warning">
+	<div class="full-page">
+		<div class="warning-container">
+			<h1>WARNING</h1>
+			<p>The content contained herein will get pretty silly. If you would prefer an employee with zero humility or sense of humor, then I strongly suggest you scroll right back where you came from (the top of the page that is).</p>
+		</div>
+	</div>
+	<div class="full-page">
+		<div class="warning-container">
+			<p>You won't be warned again.</p>
+		</div>
+	</div>
+</template>
+
+<template name="Hobbies">
+	<div class="hobbies-container">
+		<div class="hobbies-inner-container">
+			<div class="hobbies-card">
+				<h1>Robotics</h1>
+			</div><!--
+			--><div class="hobbies-card">
+				<h1>Biking</h1>
+			</div><!--
+			--><div class="hobbies-card">
+				<h1>Magic: The Gathering</h1>
+			</div><!--
+			--><div class="hobbies-card">
+				<h1>Karaoke</h1>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="Footer">
+	<div class="footer-container">
+		<p>Thanks for looking at my site! If you would like to contact me, please email me at <a href="mailto:soren468@gmail.com">soren468@gmail.com</a>.</p>
 	</div>
 </template>
 
