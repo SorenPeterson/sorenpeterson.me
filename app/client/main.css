@@ -455,7 +455,7 @@ body {
 	min-width: 500px;
 }
 
-.hobbies-card .left,.right {
+.hobbies-card .left, .hobbies-card .right {
 	width: 30px;
 	position: absolute;
 	top: 50%;
