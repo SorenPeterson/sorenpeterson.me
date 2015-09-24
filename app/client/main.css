@@ -364,3 +364,47 @@ body {
 	left: 15px;
 }
 
+/* RESUME */
+
+.resume-container {
+	text-align: center;
+}
+
+.resume-container img {
+	max-width: 400px;
+	box-shadow: 0 3px 5px gray;
+}
+
+.resume-overlay-container {
+	display: inline-block;
+	position: relative;
+	margin: 20px;
+}
+
+.resume-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.resume-overlay:hover {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.resume-overlay h3 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+}
+
+.resume-overlay:hover h3 {
+	visibility: visible;
+}
+

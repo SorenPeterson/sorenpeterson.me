@@ -9,6 +9,9 @@
 
 <body>
 	{{> Header}}
+	{{> Home }}
+	{{> Portfolio}}
+	{{> Resume}}
 </body>
 
 <template name="Home">
@@ -24,7 +27,6 @@
 			<p>Most recently I have fallen in love with <strong>Meteor</strong>. Meteor is from a new breed of web application stacks. Meteor allows you to build both the frontend and the backend using <strong>JavaScript</strong>. Meteor has a lot of attractive features. I like it because it let's you get right into the code without getting in your way too much. It feels much less like a framework than other frameworks. On top of that the community is extremely supportive and active.</p>	
 		</div>
 	</div>
-	{{> Portfolio}}
 </template>
 
 <template name="Header">
@@ -134,48 +136,17 @@
 	{{> UI.contentBlock}}
 </template>
 
-<template name="Doge">
-	<div class="portfolio-item-container" style="background-image: url(/kyfc.jpg);">
-		<div class="title">
-			<h1>Keep Your Friends Close</h1>
-		</div>
-		<div class="description">
-			<p>Keep Your Friends Close was an application designed for the final project of Dev Bootcamp. It helps people coordinate and plan an event or gathering. We used our communication and organization skills to bring it to fruition within 4 days.</p>
-		</div>
-	</div>
-	<div class="portfolio-item-expanded">
-		<img src="/close.png" class="close"/>
-		<a class="download-badge" href="https://itunes.apple.com/us/app/nature-heals-30-x-30/id1013557887?mt=8" target="_blank">
-			<img src="/badge-download-on-the-app-store.svg"/>
+<template name="Resume">
+	<div class="resume-container">
+		<h1>Resume</h1>
+		<a href="/resume.pdf">
+			<div class="resume-overlay-container">
+				<div class="resume-overlay">
+					<h3>Click to download</h3>
+				</div>
+				<img src="/resume.png"/>
+			</div>
 		</a>
-		<a class="download-badge" href="https://play.google.com/store/apps/details?id=com.idt5nn5sjxmpbl14t6mty" target="_blank">
-			<img src="/Get_it_on_Google_play.svg"/>
-		</a>
-		<h1>Nature Heals 30 x 30</h1>
-		<p class="description">
-			doge
-		</p>
-	</div>
-	<div class="portfolio-item-container" style="background-image: url(/vibeta.jpg);">
-		<div class="title">
-			<h1>Veteran Insider Beta</h1>
-		</div>
-		<div class="description">
-			<p>Veteran Insider is a company that exists to create meaningful connections between veterans and employers. Through an advanced filtering and analysis process, this application provides leads, feedback and actionable steps to get it's users closer to filling or finding a job.</p>
-		</div>
-	</div>
-	<div class="portfolio-item-expanded">
-		<img src="/close.png" class="close"/>
-		<a href="https://itunes.apple.com/us/app/nature-heals-30-x-30/id1013557887?mt=8" target="_blank">
-			<img class="download-badge" src="/badge-download-on-the-app-store.svg"/>
-		</a>
-		<a href="https://play.google.com/store/apps/details?id=com.idt5nn5sjxmpbl14t6mty" target="_blank">
-			<img class="download-badge" src="/Get_it_on_Google_play.svg"/>
-		</a>
-		<h1>Nature Heals 30 x 30</h1>
-		<p class="description">
-			doge
-		</p>
 	</div>
 </template>
 
