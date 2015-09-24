@@ -371,6 +371,7 @@ body {
 }
 
 .resume-container img {
+	width: 100%;
 	max-width: 400px;
 	box-shadow: 0 3px 5px gray;
 }
