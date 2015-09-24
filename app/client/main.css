@@ -436,11 +436,38 @@ body {
 .hobbies-inner-container {
 	max-width: 1024px;
 	margin: auto;
+	text-align: center;
 }
 
 .hobbies-card {
+	vertical-align: top;
+	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	width: 50%;
 	text-align: center;
+	min-width: 500px;
 }
+
+.hobbies-card .left,.right {
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hobbies-card .left {
+	left: 10px;
+}
+
+.hobbies-card .right {
+	right: 10px;
+}
+
+.hobbies-content-item img.wide {
+	width: 80%;
+}
+
+.hobbies-content-item p {
+}
+

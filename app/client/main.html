@@ -170,19 +170,33 @@
 <template name="Hobbies">
 	<div class="hobbies-container">
 		<div class="hobbies-inner-container">
-			<div class="hobbies-card">
+			{{#HobbiesItem}}
 				<h1>Robotics</h1>
-			</div><!--
-			--><div class="hobbies-card">
+				<div class="hobbies-content-container">
+					<div class="hobbies-content-item">
+						<img class="wide" src="/unicorns-are-safe.jpg"/>
+						<p>Even unicorns wear safety glasses</p>
+					</div>
+				</div>
+			{{/HobbiesItem}}<!--
+			-->{{#HobbiesItem}}
 				<h1>Biking</h1>
-			</div><!--
-			--><div class="hobbies-card">
+			{{/HobbiesItem}}<!--
+			-->{{#HobbiesItem}}
 				<h1>Magic: The Gathering</h1>
-			</div><!--
-			--><div class="hobbies-card">
+			{{/HobbiesItem}}<!--
+			-->{{#HobbiesItem}}
 				<h1>Karaoke</h1>
-			</div>
+			{{/HobbiesItem}}
 		</div>
+	</div>
+</template>
+
+<template name="HobbiesItem">
+	<div class="hobbies-card">
+		<img class="left" src="/left.png"/>
+		<img class="right" src="/right.png"/>
+		{{> UI.contentBlock}}
 	</div>
 </template>
 
