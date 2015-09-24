@@ -38,6 +38,10 @@ Template.PortfolioItem.onRendered(function() {
 
 Template.HobbiesItem.events({
 	'click .right': function(evt, tmpl) {
+		var video = tmpl.find('.hobbies-content-item.open video');
+		if(video) {
+			video.pause();
+		}
 		var $open_container = $(tmpl.find('.hobbies-content-item.open'));
 		$open_container.removeClass('open');
 		var $next = $open_container.next();
@@ -47,6 +51,7 @@ Template.HobbiesItem.events({
 		$next.addClass('open');
 	},
 	'click .left': function(evt, tmpl) {
+		tmpl.find('.hobbies-content-item.open video').pause();
 		var $open_container = $(tmpl.find('.hobbies-content-item.open'));
 		$open_container.removeClass('open');
 		var $prev = $open_container.prev();
