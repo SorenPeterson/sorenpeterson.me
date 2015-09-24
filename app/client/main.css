@@ -403,6 +403,7 @@ body {
 	left: 0;
 	right: 0;
 	visibility: hidden;
+	margin: 0;
 }
 
 .resume-overlay:hover h3 {
