@@ -24,41 +24,19 @@ body {
 
 .header-container {
 	width: 100%;
-	position: fixed;
 	top: 0;
 	background-color: rgba(255, 255, 255, 0.5);
+	background: url(/portland.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	box-shadow: 0 3px 5px gray;
-}
-
-@media (max-width: 768px) {
-	.header-content {
-		text-align: center;
-	}
-
-	.header-spacer {
-		height: 100px;
-	}
-
-	.header-container {
-		position: absolute;
-	}
-}
-
-@media (min-width: 769px) {
-	.header-content .right-side {
-		float: right;
-	}
-
-	.header-spacer {
-		height: 57px;
-	}
-
-	.header-container {
-		position: fixed;
-	}
+	position: relative;
 }
 
 .header-content {
+	text-align: center;
 	max-width: 1024px;
 	padding: 10px 0;
 	margin: 0 auto;
@@ -72,6 +50,34 @@ body {
 .header-content .right-side .links {
 	margin: 10px;
 	font-size: 20px;
+}
+
+.me-img {
+	width: 120px;
+	border-radius: 100%;
+	border: 5px solid black;
+	box-shadow: 0 3px 5px gray;
+}
+
+.me-img-container {
+	margin-top: -50px;
+	transform: translateY(50%);
+}
+
+.social-links-container {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.social-links-container img {
+	border-radius: 5px;
+	width: 50px;
+	margin: 10px;
+}
+
+.social-links-container a {
+	text-decoration: none;
 }
 
 /* INTRO */
@@ -97,15 +103,5 @@ body {
 .intro-content {
 	max-width: 1024px;
 	margin: auto;
-}
-
-.intro-container-footer img {
-	border-radius: 5px;
-	width: 50px;
-	margin: 25px;
-}
-
-.intro-content a {
-	text-decoration: none;
 }
 
