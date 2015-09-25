@@ -197,7 +197,20 @@ body {
 	margin-left: 135px;
 }
 
-.portfolio-item-expanded .description {
+.portfolio-item-expanded .screenshot-list-container {
+	text-align: left;
+	white-space: nowrap;
+	overflow-y: hidden;
+	margin: 0;
+	clear: both;
+}
+
+.portfolio-item-expanded .screenshot-container {
+	border: 1px solid black;
+	width: 400px;
+	display: inline-block;
+	position: relative;
+	background-color: white;
 	clear: both;
 	text-align: justify;
 }
