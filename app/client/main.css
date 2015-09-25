@@ -143,6 +143,9 @@ body {
 	box-shadow: 0 3px 5px gray;
 }
 
+.portfolio-item-container:hover {
+}
+
 @media (max-width: 768px) {
 	.portfolio-item-container {
 		width: 80vw;
