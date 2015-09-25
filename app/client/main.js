@@ -25,3 +25,14 @@ Template.PortfolioItem.events({
 	}
 });
 
+Template.PortfolioItem.onRendered(function() {
+	$('.screenshot-container').height(
+		$('.portfolio-item-expanded').height() - 100
+	);
+	$(window).resize(function() {
+		$('.screenshot-container').height(
+			$('.portfolio-item-expanded').height() - 100
+		);
+	});
+});
+
