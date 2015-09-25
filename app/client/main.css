@@ -133,7 +133,8 @@ body {
 }
 
 .portfolio-item-container {
-	background: url(/3030.jpg);
+	background: url() no-repeat center center;
+	background-size: cover;
 	position: relative;
 	vertical-align: top;
 	display: inline-block;
@@ -141,9 +142,6 @@ body {
 	height: 300px;
 	margin: 25px;
 	box-shadow: 0 3px 5px gray;
-}
-
-.portfolio-item-container:hover {
 }
 
 @media (max-width: 768px) {
@@ -171,5 +169,45 @@ body {
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
+}
+
+.portfolio-item-expanded {
+	z-index: 1;
+	position: fixed;
+	background-color: azure;
+	opacity: 0;
+	top: 50px;
+	bottom: 50px;
+	left: 50px;
+	right: 50px;
+	box-shadow: 0 3px 5px gray;
+}
+
+.portfolio-item-expanded.open {
+	opacity: 1;
+	animation: opening 0.5s;
+}
+
+@keyframes opening {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.portfolio-item-expanded.closed {
+	opacity: 0;
+	animation: closing 0.5s;
+}
+
+@keyframes closing {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
