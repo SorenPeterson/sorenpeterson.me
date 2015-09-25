@@ -200,19 +200,43 @@ body {
 .portfolio-item-expanded .screenshot-list-container {
 	text-align: left;
 	white-space: nowrap;
-	overflow-y: hidden;
 	margin: 0;
 	clear: both;
+	overflow-x: scroll;
 }
 
 .portfolio-item-expanded .screenshot-container {
+	vertical-align: top;
+	box-sizing: border-box;
 	border: 1px solid black;
 	width: 400px;
+	height: 100%;
 	display: inline-block;
 	position: relative;
 	background-color: white;
 	clear: both;
 	text-align: justify;
+	margin-right: 20px;
+	overflow-y: hidden;
+}
+
+.portfolio-item-expanded .screenshot-container:last-child {
+	margin-right: 0;
+}
+
+.portfolio-item-expanded .screenshot-container img {
+	width: 100%;
+}
+
+.portfolio-item-expanded .screenshot-container .description {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	margin: 0;
+	padding: 10px 0;
+	white-space: normal;
 }
 
 @media (max-width: 768px) {
