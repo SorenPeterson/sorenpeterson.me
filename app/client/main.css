@@ -174,17 +174,53 @@ body {
 .portfolio-item-expanded {
 	z-index: 1;
 	position: fixed;
-	background-color: azure;
+	background-color: rgba(255, 255, 255, 0.9);;
 	opacity: 0;
+	pointer-events: none;
 	top: 50px;
 	bottom: 50px;
 	left: 50px;
 	right: 50px;
 	box-shadow: 0 3px 5px gray;
+	padding: 15px;
+}
+
+.download-badge {
+	height: 40px;
+	float: right;
+	clear: right;
+	margin-bottom: 10px;
+}
+
+.portfolio-item-expanded h1 {
+	text-align: center;
+	margin-left: 135px;
+}
+
+.portfolio-item-expanded .description {
+	clear: both;
+	text-align: justify;
+}
+
+@media (max-width: 768px) {
+	.portfolio-item-expanded {
+		top: 5px;
+		bottom: 5px;
+		left: 5px;
+		right: 5px;
+	}
+}
+
+.portfolio-item-expanded .close {
+	width: 30px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
 }
 
 .portfolio-item-expanded.open {
 	opacity: 1;
+	pointer-events: auto;
 	animation: opening 0.5s;
 }
 
@@ -199,6 +235,7 @@ body {
 
 .portfolio-item-expanded.closed {
 	opacity: 0;
+	pointer-events: none;
 	animation: closing 0.5s;
 }
 
