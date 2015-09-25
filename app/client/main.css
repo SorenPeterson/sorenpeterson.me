@@ -79,6 +79,7 @@ body {
 .me-img-container {
 	margin-top: -50px;
 	transform: translateY(55%);
+	pointer-events: none;
 }
 
 @media (min-width: 769px) {
@@ -132,13 +133,13 @@ body {
 }
 
 .portfolio-item-container {
+	background: url(/3030.jpg);
 	position: relative;
 	vertical-align: top;
 	display: inline-block;
-	background: url(/3030.jpg);
-	width: 40vw;
-	height: 30vw;
-	margin: 2.5vw;
+	width: 400px;
+	height: 300px;
+	margin: 25px;
 	box-shadow: 0 3px 5px gray;
 }
 
@@ -149,16 +150,21 @@ body {
 	}
 }
 
+@media (max-width: 350px) {
+	.portfolio-item-container {
+		height: 120vw;
+	}
+}
+
 .portfolio-item-container .title {
-	background-color: rgba(128, 128, 128, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 	padding: 10px;
 	color: white;
-	text-shadow: 0 3px 5px black;
 }
 
 .portfolio-item-container .description {
 	color: white;
-	background-color: rgba(128, 128, 128, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	bottom: 0;
 	width: 100%;
