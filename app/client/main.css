@@ -1,6 +1,7 @@
 /* MISC/UTILS/EXTRA */
 body {
 	background: url(/old_moon.png) 0, url(/congruent_pentagon.png);
+	font-family: Raleway;
 }
 
 .full-page {
@@ -58,7 +59,7 @@ body {
 }
 
 .header-content {
-	max-width: 800px;
+	max-width: 1024px;
 	padding: 10px 0;
 	margin: 0 auto;
 }
@@ -76,5 +77,16 @@ body {
 /* INTRO */
 
 .intro-container {
+	padding: 5px;
+}
+
+.intro-container.intro-container-header {
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 40px 0 20px;
+}
+
+.intro-content {
+	max-width: 1024px;
+	margin: auto;
 }
 
