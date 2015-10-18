@@ -1,0 +1,54 @@
+<template name="TicTacToe">
+	<div id="tictactoe">
+		<h1 class="title">Tic Tac Toe</h1>
+		{{> Board}}
+		{{> PickSide}}
+		{{> GameOver}}
+	</div>
+</template>
+
+<template name="Board">
+	<table class="board">
+		{{#each rows}}
+			<tr>
+				{{#each this}}
+					<td data-id={{this.index}} class="spot">
+						<div class="marker marker-{{this.value}}"></div>
+					</td>
+				{{/each}}
+			</tr>
+		{{/each}}
+	</table>
+</template>
+
+<template name="GameOver">
+	{{#if gameOver}}
+		<div class="game-end-overlay">
+			<h1>GAME OVER!</h1>
+			<h1>
+				{{#if winner}}
+					{{winner}} wins
+				{{else}}
+					It's a tie
+				{{/if}}
+			</h1>
+			<div class="restart">
+				Play again
+			</div>
+		</div>
+	{{/if}}
+</template>
+
+<template name="PickSide">
+	{{#unless started}}
+		<div class="pick x">
+			<img src="/playx.jpg"/>
+			Play X
+		</div>
+		<div class="pick o">
+			<img src="/playo.jpg"/>
+			Play O
+		</div>
+	{{/unless}}
+</template>
+
