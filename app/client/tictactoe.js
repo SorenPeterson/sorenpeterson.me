@@ -29,10 +29,12 @@ Score = function(board, player) {
 }*/
 
 var board;
+var difficulty;
 
 Template.Board.onCreated(function() {
 	board = new Board();
 	window.theboard = board;
+	difficulty = new ReactiveVar('0');
 });
 
 Template.Board.helpers({
@@ -54,6 +56,9 @@ Template.Board.helpers({
 	},
 	winner: function() {
 		return board.winner();
+	},
+	difficulty: function() {
+		return difficulty.get();
 	},
 });
 
@@ -95,5 +100,24 @@ Template.PickSide.events({
 		board.started.set(true);
 		board.chooseMove();
 	},
+});
+
+var setDifficulty = _(function(value) {
+	difficulty.set(value);
+}).throttle(200);
+
+var level = new ReactiveVar(0);
+
+Template.Difficulty.events({
+	'input input[type=range]': function(evt, tmpl) {
+		setDifficulty(evt.target.value === '0' ? '0' : (evt.target.max - evt.target.value + 1));
+		level.set(evt.target.value);
+	},
+});
+
+Template.Difficulty.helpers({
+	level: function() {
+		return level.get();
+	}
 });
 

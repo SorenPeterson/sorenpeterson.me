@@ -4,11 +4,12 @@
 		{{> Board}}
 		{{> PickSide}}
 		{{> GameOver}}
+		{{> Difficulty}}
 	</div>
 </template>
 
 <template name="Board">
-	<table class="board">
+	<table class="board" style="animation-duration:{{difficulty}}s;">
 		{{#each rows}}
 			<tr>
 				{{#each this}}
@@ -50,5 +51,12 @@
 			Play O
 		</div>
 	{{/unless}}
+</template>
+
+<template name="Difficulty">
+	<div class="difficulty-setting">
+		<h1>LEVEL {{level}}</h1>
+		<input type="range" min="0" max="10" value="0" step="1"/>
+	</div>
 </template>
 
