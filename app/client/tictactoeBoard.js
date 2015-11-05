@@ -86,14 +86,14 @@ Board.prototype.winningLines = [
 ];
 
 Board.prototype.chooseMove = function() {
-	if(this.empty()) {
-		this.play(0);
-	} else if(this.canWin()) {
+	if(this.canWin()) {
 		console.log('could win');
 	} else if(this.canBlockWin()) {
 		console.log('could block win');
 	} else if(this.canFork()) {
 		console.log('could fork');
+	} else if(this.canTrapSneakyOpponent()) {
+		console.log('could trap sneaky opponent');
 	} else if(this.canBlockFork()) {
 		console.log('could block fork');
 	} else if(this.canPlayCenter()) {

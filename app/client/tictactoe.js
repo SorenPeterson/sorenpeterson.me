@@ -65,7 +65,7 @@ Template.Board.helpers({
 Template.Board.events({
 	'click .spot': function(evt, tmpl) {
 		var position = new Number(evt.target.closest('.spot').dataset.id);
-		if(board.play(position)) {
+		if(board.play(position) && !board.finished()) {
 			board.chooseMove();
 		}
 	},
